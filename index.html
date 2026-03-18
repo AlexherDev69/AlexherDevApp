@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlexherDevApp - Applications mobiles & web</title>
+    <meta name="description" content="AlexherDevApp - Developpeur d'applications mobiles et web. Boost for Letterboxd, MySteelbook, EasyDiet.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px 60px;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, #6c63ff, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: #999;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .projects {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 40px 20px 80px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .project-card {
+            background: #141414;
+            border: 1px solid #222;
+            border-radius: 16px;
+            padding: 36px;
+            transition: border-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .project-card:hover {
+            border-color: #333;
+            transform: translateY(-2px);
+        }
+
+        .project-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .project-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .project-header h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .project-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-top: 4px;
+        }
+
+        .project-description {
+            color: #aaa;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .project-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .feature-tag {
+            background: #1e1e1e;
+            color: #ccc;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            border: 1px solid #2a2a2a;
+        }
+
+        /* Boost for Letterboxd */
+        .boost .project-icon {
+            background: linear-gradient(135deg, #ff8a00, #e52e71);
+        }
+        .boost .project-badge {
+            background: rgba(229, 46, 113, 0.15);
+            color: #e52e71;
+        }
+
+        /* MySteelbook */
+        .steelbook .project-icon {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+        }
+        .steelbook .project-badge {
+            background: rgba(59, 130, 246, 0.15);
+            color: #3b82f6;
+        }
+
+        /* EasyDiet */
+        .easydiet .project-icon {
+            background: linear-gradient(135deg, #2d6a4f, #40916c);
+        }
+        .easydiet .project-badge {
+            background: rgba(45, 106, 79, 0.15);
+            color: #40916c;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid #1a1a1a;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: #6c63ff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .project-card {
+                padding: 24px;
+            }
+
+            .project-header h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h1>Alexher<span>DevApp</span></h1>
+        <p>Applications mobiles & web — Android, iOS, Web</p>
+    </section>
+
+    <section class="projects">
+
+        <!-- Boost for Letterboxd -->
+        <article class="project-card boost">
+            <div class="project-header">
+                <div class="project-icon">🎬</div>
+                <div>
+                    <h2>Boost for Letterboxd</h2>
+                    <span class="project-badge">Android</span>
+                </div>
+            </div>
+            <p class="project-description">
+                L'application compagnon ultime pour les utilisateurs de Letterboxd.
+                Explorez des statistiques avancees sur vos habitudes cine, decouvrez de nouveaux films
+                grace a des recommandations personnalisees, et profitez d'une experience enrichie
+                pour gerer votre journal de films.
+            </p>
+            <div class="project-features">
+                <span class="feature-tag">Statistiques avancees</span>
+                <span class="feature-tag">Recommandations</span>
+                <span class="feature-tag">Journal de films</span>
+                <span class="feature-tag">Flutter</span>
+            </div>
+        </article>
+
+        <!-- MySteelbook -->
+        <article class="project-card steelbook">
+            <div class="project-header">
+                <div class="project-icon">💿</div>
+                <div>
+                    <h2>MySteelbook</h2>
+                    <span class="project-badge">Android &middot; iOS &middot; Web</span>
+                </div>
+            </div>
+            <p class="project-description">
+                La plateforme de reference pour les collectionneurs de steelbooks.
+                Cataloguez votre collection, suivez les sorties a venir, explorez un catalogue
+                complet et connectez-vous avec la communaute de collectionneurs.
+                Disponible sur mobile et sur le web.
+            </p>
+            <div class="project-features">
+                <span class="feature-tag">Catalogue complet</span>
+                <span class="feature-tag">Gestion de collection</span>
+                <span class="feature-tag">Communaute</span>
+                <span class="feature-tag">Flutter &middot; React &middot; Node.js</span>
+            </div>
+        </article>
+
+        <!-- EasyDiet -->
+        <article class="project-card easydiet">
+            <div class="project-header">
+                <div class="project-icon">🥗</div>
+                <div>
+                    <h2>EasyDiet</h2>
+                    <span class="project-badge">Android &middot; iOS</span>
+                </div>
+            </div>
+            <p class="project-description">
+                Votre coach alimentaire personnel. Generez des plans de repas personnalises
+                selon vos objectifs, votre regime alimentaire et vos allergies.
+                Suivez votre poids, gerez vos courses avec des listes automatiques
+                et decouvrez des recettes adaptees a votre profil.
+            </p>
+            <div class="project-features">
+                <span class="feature-tag">Plans personnalises</span>
+                <span class="feature-tag">77 recettes</span>
+                <span class="feature-tag">Suivi du poids</span>
+                <span class="feature-tag">Liste de courses</span>
+                <span class="feature-tag">Flutter</span>
+            </div>
+        </article>
+
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 AlexherDevApp &mdash; Tous droits reserves</p>
+    </footer>
+
+</body>
+</html>
